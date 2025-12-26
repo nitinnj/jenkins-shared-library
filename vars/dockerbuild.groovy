@@ -1,4 +1,4 @@
-def call(String imageName, String imageVersion) {
-    sh "docker build -t ${env.DOCKERHUB_USER}/${imageName}:${imageVersion} ."
+def call(String imageName, String imageVersion, String dockerHubUser) {
+    sh "docker build -t ${dockerHubUser}/${imageName}:${imageVersion} ."
 }
 
